@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: 'Poppins';
+    background-image: linear-gradient(to right,#0F70DA,#02ce3b);
+
+}
+
+/*Inicio do Header padrão*/
+
+.cabecalhoPrincipal .container {
+    width: 90%;
+    margin: 0 auto; 
+}
+
+.cabecalhoPrincipal{
+    background-color: #0C5EB8;
+    padding: 10px 0;
+}
+
+.cabecalhoPrincipal .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cabecalhoPrincipal-logo img{
+    width: 220px;
+}
+
+.cabecalhoPrincipal-logo a{
+    text-decoration: none;
+    color:white
+}
+
+.cabecalhoPrincipal-nav{
+    display: flex;
+}
+
+.cabecalhoPrincipal-nav-link{
+    padding: 20px;
+	margin-bottom: 10px;
+	color: white;
+	text-decoration: none;
+	transition: .5s;
+	display: block;
+
+}
+
+.cabecalhoPrincipal-nav-link-cadastre{
+    border: 1px solid #ffffff;
+    border-radius: 15px;
+}
+
+/*Fim do Header*/
+
+.conteudoPrincipal{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteudoPrincipal .container{
+    display: flex;
+    width: 80%;
+    height: 85%;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.form{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 40px 0 0 40px;
+}
+
+.form-header h2{
+    color: #303F50;
+    font-size: 2rem;
+    padding: 3%;
+    font-weight: bolder;
+    text-align: center;
+    padding-top: 10%;
+}
+
+.form-header h2::after{
+    content:'';
+    display: block;
+    width: 3.5rem;
+    height: 0.3rem;
+    background-image: linear-gradient(to left, #00FF47, #0F70DA);
+    margin: 0 auto;
+    margin-left: 15.2%;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.form-inputs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem 0;
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box [id="email"]{
+    margin-bottom: 1rem;
+}
+
+.input-box [id="senha"]{
+    margin-bottom: 3%;
+}
+
+.input-box input{
+    width: 350px;
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001C;
+}
+
+.input-box input:hover{
+    background-color: #eeeeee75;
+}
+
+.input-box input:focus-visible{
+    outline: 1px solid #74727275;
+}
+
+.input-box input::placeholder{
+    font-size: 0.70rem;
+    color: #2D3748;
+}
+
+.forget p{
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #2D3748;
+}
+
+.form-botoes p a, .forget p a{
+    text-decoration: none;
+}
+
+.input-box label, .form-footer p {
+    font-size: 0.90rem;
+    font-weight: 600;
+    color: #2D3748;
+}
+
+.form-footer{
+    display: flex;
+    align-items: center;
+    padding-left: 12%;
+    padding-top: 5%;
+}
+
+.form-botoes button{
+    width: 385px;
+    padding: 0.7rem 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.form-botoes button a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.form-botoes button[id="login"]{
+    background-color: #0C5EB8;
+    margin-bottom: 4%;
+}
+    
+.form-botoes button[id="login"]:hover{
+    background-color: #107bee;
+}
+
+.form-botoes p{
+    text-align: center;
+    margin-bottom: 4%;
+}
+
+.form-botoes button[id="linkedin"]{
+    background-color: #2D3748;
+}
+
+.form-botoes button[id="linkedin"]:hover{
+    background-color: #536585;
+}
+
+.form-imagem{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient(#00FF47, #0F70DA);
+    border-radius: 0 40px 40px 0;
+    gap: 2%;
+}
+
+.form-imagem h2{
+    font-weight: bold;
+    text-align: end;
+    font-size: 1.75rem;
+    color: #fff; 
+    line-height: 130%;
+    margin-top: 5%;
+}
+
+.form-imagem img{
+    width: 94%;
+    padding-right: 43%;
+}
