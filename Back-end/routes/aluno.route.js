@@ -5,9 +5,9 @@ const alunoRoutes = express.Router();
 let Aluno = require('../model/Aluno');
 
 // api to post alunos
-alunoRoutes.route('/aluno').post(async (req, res) =>{
+alunoRoutes.post('/', async (req, res) =>{
 
-    const {nome, email, cpf, curso, instituicao, grau, anoEntrada, funcao, empresa, dataInic, dataFim} = req.body;
+    const {nome, email, cpf, curso, instituicao, grau, anoEntrada, tecnologias, funcao, empresa, dataInic, dataFim, sobre} = req.body;
 
     const aluno = {
         nome, 
@@ -22,7 +22,7 @@ alunoRoutes.route('/aluno').post(async (req, res) =>{
         empresa,
         dataInic,
         dataFim,
-        sobre
+        sobre,
     }
 
     try {
@@ -36,7 +36,7 @@ alunoRoutes.route('/aluno').post(async (req, res) =>{
 })
 
 // api to get alunos
-alunoRoutes.route('/').get (async (req, res) => {
+alunoRoutes.get('/', async (req, res) => {
   try {
     const students = await Aluno.find()
 
@@ -47,7 +47,7 @@ alunoRoutes.route('/').get (async (req, res) => {
 })
 
 // api to get alunos by id
-alunoRoutes.route('/aluno/:id').get(async (req, res) =>{
+alunoRoutes.get('/:id', async (req, res) =>{
   const id = req.params.id;
 
   try {
@@ -64,7 +64,7 @@ alunoRoutes.route('/aluno/:id').get(async (req, res) =>{
 });
 
 // api to update personal aluno data (patch route)
-alunoRoutes.route('/:id').patch(async (req, res) => {
+alunoRoutes.patch('/:id', async (req, res) => {
 
   const {nome, email, cpf} = req.body
 
@@ -91,7 +91,7 @@ alunoRoutes.route('/:id').patch(async (req, res) => {
 })
 
 //api to update academic aluno data (patch routes)
-alunoRoutes.route('/:id').patch(async (req, res) => {
+alunoRoutes.patch('/:id', async (req, res) => {
 
   const {instituicao, grau, anoEntrada} = req.body
 
@@ -118,7 +118,7 @@ alunoRoutes.route('/:id').patch(async (req, res) => {
 })
 
 //api to update professional aluno data (patch routes)
-alunoRoutes.route('/:id').patch(async (req, res) => {
+alunoRoutes.patch('/:id', async (req, res) => {
 
   const {funcao, empresa, dataInic, dataFim} = req.body
 
@@ -146,7 +146,7 @@ alunoRoutes.route('/:id').patch(async (req, res) => {
 })
 
 // api for delete alunos
-alunoRoutes.route('/:id').delete(async (req, res) => {
+alunoRoutes.delete('/:id', async (req, res) => {
   const id = req.params.id
 
   const aluno = await Aluno.findOne({_id: id})

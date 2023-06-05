@@ -24,7 +24,7 @@ let Aluno = new Schema({
     type: Date
   },
   tecnologias: {
-    type: Number
+    type: String
   },
   funcao: {
     type: String
