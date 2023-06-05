@@ -7,31 +7,7 @@ let Aluno = require('../model/Aluno');
 // api to post alunos
 alunoRoutes.route('/aluno').post(async (req, res) =>{
 
-    const {nome, email, cpf, curso, instituicao, grau, anoEntrada, funcao, empresa, dataInic, dataFim} = req.body
-    //Validações
-    if(!nome){
-        res.status(422).json({error: 'O nome é obrigatório!'})
-    }else if(!email){
-        res.status(422).json({error: 'O email é obrigatório!'})
-    }else if(!cpf){
-      res.status(422).json({error: 'O CPF é obrigatório!'})
-    }else if(!curso){
-      res.status(422).json({error: 'O nome do curso é obrigatório!'})
-    }else if(!instituicao){
-      res.status(422).json({error: 'O nome da instituiçaõ de ensino é obrigatório!'})
-    }else if(!grau){
-      res.status(422).json({error: 'O grau de escolaridade é obrigatório!'})
-    }else if(!anoEntrada){
-      res.status(422).json({error: 'O ano de entrada é obrigatório!'})
-    }else if(!funcao){
-      res.status(422).json({error: 'O cargo é obrigatório!'})
-    }else if(!empresa){
-      res.status(422).json({error: 'O nome da empresa é obrigatório!'})
-    }else if(!dataInic){
-      res.status(422).json({error: 'A data de inicio é obrigatória!'})
-    }else if(!dataFim){
-      res.status(422).json({error: 'A data de término é obrigatória!'})
-    }
+    const {nome, email, cpf, curso, instituicao, grau, anoEntrada, funcao, empresa, dataInic, dataFim} = req.body;
 
     const aluno = {
         nome, 

@@ -50,6 +50,13 @@ body {
     border-radius: 15px;
 }
 
+.cabecalhoPrincipal-nav a::after{
+    content:"";
+    width: 100%;
+    height: 100px;
+    background-color: #00FF47;
+}
+
 /*Fim do Header*/
 
 .conteudoPrincipal{
@@ -66,7 +73,7 @@ body {
 
 .conteudoPrincipal-esquerda{
     width: 45%;
-    height: 130vh;
+    height: 125vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -94,8 +101,8 @@ body {
 }
 
 .form-header{
-    margin-top: 10%;
-    padding-bottom: 7%;
+    margin-top: 7%;
+    padding-bottom: 3%;
 }
 
 .form-header h1{
@@ -105,12 +112,25 @@ body {
     font-weight: bolder;
 }
 
+.form-header h1::before{
+    content:'';
+    display: block;
+    width: 19.8rem;
+    height: 0.3rem;
+    background-image: linear-gradient(to left, #00FF47, #0F70DA);
+    margin: 0 auto;
+    margin-left: 27.5%;
+    margin-top: 1%;
+    position: absolute;
+    border-radius: 10px;
+}
+
 .form-inputs{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 0 4rem 0;
+    padding: 0 2rem 0;
 }
 
 .input-box{
@@ -120,7 +140,16 @@ body {
 }
 
 .input-box input{
-    width: 220px;
+    width: 240px;
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001C;  
+}
+
+.input-box select{
+    width: 280px;
     margin: 0.6rem 0;
     padding: 0.8rem 1.2rem;
     border: none;
@@ -128,20 +157,25 @@ body {
     box-shadow: 1px 1px 6px #0000001C;
 }
 
-.input-box input:hover{
+.input-box input[id="Nome"]{
+    width: 640px;
+}
+
+.input-box input:hover, .input-box select:hover{
     background-color: #eeeeee75;
 }
 
-.input-box input:focus-visible{
+.input-box input:focus-visible, .input-box select:focus-visible{
     outline: 1px solid #74727275;
 }
 
-.input-box input::placeholder{
+.input-box input::placeholder, .input-box select::placeholder{
     font-size: 0.70rem;
+    font-weight: 600;
     color: #2D3748;
 }
 
-.input-box label, .form-checkbox label, .form-footer p {
+.input-box label, .form-checkbox label, .input-box select, .form-footer p {
     font-size: 0.80rem;
     font-weight: 600;
     color: #2D3748;
@@ -158,32 +192,22 @@ body {
 .form-botoes{
     display: flex;
     justify-content: center;
-    margin-top: 5%;
     padding: 2rem;
-    gap: 2%;
 }
 
 .form-botoes button{
-    width: 300px;
+    width: 618px;
     padding: 0.7rem 1rem;
     border: none;
     border-radius: 5px;
 }
 
-.form-botoes button[id="criar"]{
+.form-botoes button[id="continuar"]{
     background-color: #0C5EB8;
 }
 
-.form-botoes button[id="criar"]:hover{
+.form-botoes button[id="continuar"]:hover{
     background-color: #107bee;
-}
-
-.form-botoes button[id="linkedin"]{
-    background-color: #2D3748;
-}
-
-.form-botoes button[id="linkedin"]:hover{
-    background-color: #536585;
 }
 
 .form-botoes a{
@@ -197,5 +221,19 @@ body {
     flex-direction: column;
     align-items: center;
     line-height: 140%;
-    margin-top: 12%;
+    margin-top: 5%;
+}
+
+@media(max-width: 1140) {
+    .conteudoPrincipal-esquerda{
+        display: none;
+    }
+
+    .container{
+        width: 50%;
+    }
+
+    .form{
+        width: 100%;
+    }
 }

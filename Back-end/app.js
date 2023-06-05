@@ -16,7 +16,7 @@ app.use(cors());
 
 app.use('/aluno', alunoRoute);
 app.get('/', function(req, res){
-   res.send("Hello World!");
+   res.send("rota get funcionando!");
 });
 
 app.listen(3000,function(){

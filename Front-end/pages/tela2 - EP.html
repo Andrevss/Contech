@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Front-end/css/reset.css">
-    <link rel="stylesheet" href="/Front-end/css/tela2.css">
+    <link rel="stylesheet" href="/Front-end/css/tela2 - EP.css">
     <title>Contech | Cadastre-se</title>
 </head>
 <body>
@@ -17,7 +17,7 @@
             <nav class="cabecalhoPrincipal-nav">
                 <a class="cabecalhoPrincipal-nav-link" href="#">Saiba Mais</a>
                 <a class="cabecalhoPrincipal-nav-link" href="#">Empresas</a>
-                <a class="cabecalhoPrincipal-nav-link" href="#">Login</a>
+                <a class="cabecalhoPrincipal-nav-link" href="/Front-end/pages/tela3.html">Login</a>
                 <a class="cabecalhoPrincipal-nav-link cabecalhoPrincipal-nav-link-cadastre" href="#">Cadastre-se</a>
             </nav>
         </div>
@@ -32,24 +32,42 @@
                     <div class="form">
                         <form action="#">
                             <div class="form-header">
-                                <h1 class="form-header-titulo">Cadastre-se hoje e encontre seu primeiro sim!</h1>
+                                <h1 class="form-header-titulo">Informações Pessoais</h1>
                             </div>
                             <div class="form-inputs">
                                 <div class="input-box">
-                                    <label for="primeiroNome">Primeiro nome</label>
-                                    <input type="text" id="primeiroNome" name="primeiroNome" Placeholder="Digite seu primeiro nome">
+                                    <label for="Nome">Digite seu nome completo</label>
+                                    <input type="text" id="Nome" name="Nome" Placeholder="Digite seu nome completo">
                                 </div>
+                                
                                 <div class="input-box">
-                                    <label for="segundoNome">Segundo nome</label>
-                                    <input type="text" id="segundoNome" name="segundoNome" Placeholder="Digite seu segundo nome">
-                                </div>
-                                <div class="input-box">
-                                    <label for="Email">Email</label>
+                                    <label for="Email">Digite seu Email</label>
                                     <input type="email" id="Email" name="Email" Placeholder="email@email.com">
+                                </div>
+                                <div class="input-box">
+                                    <label for="Email2">Confirme seu Email</label>
+                                    <input type="email" id="Email2" name="Email2" Placeholder="Confirme seu Email">
+                                </div>
+                                <div class="input-box">
+                                    <label for="cpf">Digite seu CPF</label>
+                                    <input type="cpf" id="cpf" name="cpf" Placeholder="Digite seu CPF">
+                                </div>
+                                <div class="input-box">
+                                    <label for="rg">Digite seu RG</label>
+                                    <input type="email" id="rg" name="rg" Placeholder="Digite seu RG">
                                 </div>
                                 <div class="input-box">
                                     <label for="DataNasc">Data de Nascimento</label>
                                     <input type="date" data-tipo="dataNasc" name="DataNasc">
+                                </div>
+                                <div class="input-box">
+                                    <label for="sexo">Sexo</label>
+                                    <select name="sexo" id="sexo">
+                                        <option value="" selected></option>
+                                        <option value="M">Masculino</option>
+                                        <option value="F">Feminino</option>
+                                        <option value="ND">Prefiro não revelar</option>
+                                    </select>
                                 </div>
                                 <div class="input-box">
                                     <label for="PrimeiraSenha">Digite sua senha</label>

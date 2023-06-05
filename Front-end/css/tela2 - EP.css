@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: 'Poppins';
+}
+
+/*Inicio do Header padrão*/
+
+.cabecalhoPrincipal .container {
+    width: 90%;
+    margin: 0 auto; 
+}
+
+.cabecalhoPrincipal{
+    background-color: #0C5EB8;
+    padding: 10px 0;
+}
+
+.cabecalhoPrincipal .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cabecalhoPrincipal-logo img{
+    width: 220px;
+}
+
+.cabecalhoPrincipal-logo a{
+    text-decoration: none;
+   color:white
+}
+
+.cabecalhoPrincipal-nav{
+    display: flex;
+}
+
+.cabecalhoPrincipal-nav-link{
+    padding: 20px;
+	margin-bottom: 10px;
+	color: white;
+	text-decoration: none;
+	transition: .5s;
+	display: block;
+
+}
+
+.cabecalhoPrincipal-nav-link-cadastre{
+    border: 1px solid #fff;
+    border-radius: 15px;
+}
+
+/*Fim do Header*/
+
+.conteudoPrincipal{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteudoPrincipal .container{
+    width: 100%;
+    display: flex;
+}
+
+.conteudoPrincipal-esquerda{
+    width: 45%;
+    height: 120vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(to top left, #00FF47, #0F70DA);
+}
+
+.conteudoPrincipal-esquerda h1{
+    font-size: 1.85rem;
+    color: #fff;
+    font-weight: 600;
+    padding-top: 10%;
+    line-height: 40px;
+}
+
+.conteudoPrincipal-esquerda img{
+    width: 80%;
+    padding-top: 10%;
+}
+
+.conteudoPrincipal-direita{
+    width: 55%;
+    display: flex;
+    align-items: center; 
+    flex-direction: column;
+}
+
+.form-header{
+    margin-top: 10%;
+    padding-bottom: 3%;
+}
+
+.form-header h1{
+    color: #303F50;
+    font-size: 2rem;
+    padding: 3%;
+    font-weight: bolder;
+}
+
+.form-header h1::before{
+    content:'';
+    display: block;
+    width: 17.8rem;
+    height: 0.3rem;
+    background-image: linear-gradient(to left, #00FF47, #0F70DA);
+    margin: 0 auto;
+    margin-left: 27.5%;
+    margin-top: 1%;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.form-inputs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem 0;
+}
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.input-box input{
+    width: 240px;
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001C;
+}
+
+.input-box select{
+    width: 260px;
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001C;
+}
+
+.input-box input[id="Nome"]{
+    width: 575px;
+}
+
+.input-box input:hover, .input-box select:hover{
+    background-color: #eeeeee75;
+}
+
+.input-box input:focus-visible, .input-box select:focus-visible{
+    outline: 1px solid #74727275;
+}
+
+.input-box input::placeholder, .input-box select::placeholder{
+    font-size: 0.70rem;
+    font-weight: 600;
+    color: #2D3748;
+}
+
+.input-box label, .form-checkbox label, .input-box select, .form-footer p {
+    font-size: 0.80rem;
+    font-weight: 600;
+    color: #2D3748;
+}
+
+.form-checkbox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 4rem 0;
+    margin-top: 2%;
+}
+
+.form-botoes{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    padding: 2rem;
+    gap: 2%;
+}
+
+.form-botoes button{
+    width: 300px;
+    padding: 0.7rem 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.form-botoes button[id="criar"]{
+    background-color: #0C5EB8;
+}
+
+.form-botoes button[id="criar"]:hover{
+    background-color: #107bee;
+}
+
+.form-botoes button[id="linkedin"]{
+    background-color: #2D3748;
+}
+
+.form-botoes button[id="linkedin"]:hover{
+    background-color: #536585;
+}
+
+.form-botoes a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: bolder;
+}
+
+.form-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 140%;
+    margin-top: 12%;
+}
+
+@media(max-width: 1140) {
+    .conteudoPrincipal-esquerda{
+        display: none;
+    }
+
+    .container{
+        width: 50%;
+    }
+
+    .form{
+        width: 100%;
+    }
+}
