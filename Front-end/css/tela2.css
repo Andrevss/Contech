@@ -72,8 +72,7 @@ body {
 }
 
 .conteudoPrincipal-esquerda{
-    width: 45%;
-    height: 125vh;
+    width: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -94,7 +93,7 @@ body {
 }
 
 .conteudoPrincipal-direita{
-    width: 55%;
+    width: 60%;
     display: flex;
     align-items: center; 
     flex-direction: column;
@@ -107,30 +106,43 @@ body {
 
 .form-header h1{
     color: #303F50;
-    font-size: 2rem;
-    padding: 3%;
+    font-size: 1.75rem;
+    padding-bottom: 5%;
     font-weight: bolder;
 }
 
-.form-header h1::before{
+.form-header h1::after{
     content:'';
     display: block;
-    width: 19.8rem;
+    width: 6rem;
     height: 0.3rem;
     background-image: linear-gradient(to left, #00FF47, #0F70DA);
     margin: 0 auto;
-    margin-left: 27.5%;
-    margin-top: 1%;
-    position: absolute;
+    margin-left: 0%;
+    position: relative;
     border-radius: 10px;
 }
 
 .form-inputs{
+    height: 500px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem 0;
+    padding: 0 2rem 0 2rem;
+}
+
+.form-inputs{
+    overflow-y: scroll;
+}
+
+.form-inputs::-webkit-scrollbar{
+    width: 10px;
+}
+
+.form-inputs::-webkit-scrollbar-thumb{
+    background-color: #2D3748;
+    border-radius: 10px;
 }
 
 .input-box{
@@ -140,7 +152,7 @@ body {
 }
 
 .input-box input{
-    width: 240px;
+    width: 300px;
     margin: 0.6rem 0;
     padding: 0.8rem 1.2rem;
     border: none;
@@ -149,7 +161,7 @@ body {
 }
 
 .input-box select{
-    width: 280px;
+    width: 340px;
     margin: 0.6rem 0;
     padding: 0.8rem 1.2rem;
     border: none;
@@ -157,16 +169,16 @@ body {
     box-shadow: 1px 1px 6px #0000001C;
 }
 
-.input-box input[id="Nome"]{
-    width: 640px;
+.input-box input[id="Nome"], .input-box input[id="empresa"]{
+    width: 698px;
 }
 
-.input-box input:hover, .input-box select:hover{
-    background-color: #eeeeee75;
+.input-box select[id="curso"]{
+    width: 736px;
 }
 
-.input-box input:focus-visible, .input-box select:focus-visible{
-    outline: 1px solid #74727275;
+.input-box textarea{
+    margin: 0.6rem 0;
 }
 
 .input-box input::placeholder, .input-box select::placeholder{
@@ -175,7 +187,7 @@ body {
     color: #2D3748;
 }
 
-.input-box label, .form-checkbox label, .input-box select, .form-footer p {
+.input-box label, .form-checkbox label, .input-box select, .form-footer p{
     font-size: 0.80rem;
     font-weight: 600;
     color: #2D3748;
@@ -196,10 +208,11 @@ body {
 }
 
 .form-botoes button{
-    width: 618px;
+    width: 700px;
     padding: 0.7rem 1rem;
     border: none;
     border-radius: 5px;
+    margin-top: 3%;
 }
 
 .form-botoes button[id="continuar"]{

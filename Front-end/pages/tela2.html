@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/Front-end/css/reset.css">
-    <link rel="stylesheet" href="/Front-end/css/tela2 - EP.css">
+    <link rel="stylesheet" href="/Front-end/css/tela2.css">
     <title>Contech | Cadastre-se</title>
 </head>
 <body>
@@ -30,11 +30,11 @@
                 </section>
                 <section class="conteudoPrincipal-direita">
                     <div class="form">
-                        <form action="#">
-                            <div class="form-header">
-                                <h1 class="form-header-titulo">Informações Pessoais</h1>
-                            </div>
+                        <form id="form">
                             <div class="form-inputs">
+                                <div class="form-header">
+                                    <h1 class="form-header-titulo" id="Ip">Informações Pessoais</h1>
+                                </div>
                                 <div class="input-box">
                                     <label for="Nome">Digite seu nome completo</label>
                                     <input type="text" id="Nome" name="Nome" Placeholder="Digite seu nome completo">
@@ -77,16 +77,68 @@
                                     <label for="SegundaSenha">Confirme sua senha</label>
                                     <input type="password" id="SegundaSenha" name="SegundaSenha" Placeholder="Digite sua senha novamente">
                                 </div>
-                            </div>
-                            <div class="form-checkbox">
-                                <input type="checkbox" id="termos" name="termos" value="Lembrar">
-                                <label for="termos">Lembrar de mim</label>
-                                <input type="checkbox" id="politicas" name="politicas" value="politicas">
-                                <label for="politicas">Eu concordo com todos os <a href="">Termos</a> e <a href="">Políticas de privacidade</a></label>
+                                <div class="form-header">
+                                    <h1 class="form-header-titulo" ID="Fa">Formação Acadêmica</h1>
+                                </div>
+                                <div class="input-box">
+                                    <label for="curso">Curso</label>
+                                    <select name="curso" id="curso">
+                                        <option value="" selected></option>
+                                        <option value="ADS">Análise e Desenvolvimento de Sistemas</option>
+                                        <option value="SPI">Sistemas para internet</option>
+                                    </select>
+                                </div>
+                                <div class="input-box">
+                                    <label for="grau">Grau</label>
+                                    <select name="grau" id="grau">
+                                        <option value="tec">Tecnólogo</option>
+                                    </select>
+                                </div>
+                                <div class="input-box">
+                                    <label for="instituicao">Instituicao</label>
+                                    <select name="instituicao" id="instituicao">
+                                        <option value="" selected></option>
+                                        <option value="uninassau">Centro Universitário Maurício de Nassau</option>
+                                        <option value="tiradentes">Centro Universitário Tiradentes</option>
+                                        <option value="senac">Faculdade SENAC Pernambuco</option>
+                                        <option value="ficr">Faculdade Imaculada Conceição do Recife</option>
+                                        <option value="catolica">Universidade Católica de Pernambuco</option>
+                                    </select>
+                                </div>
+                                <div class="input-box">
+                                    <label for="tecnologias">Tecnologias</label>
+                                    <textarea cols="97" rows="7" id="tecnologias" name="tecnologias" placeholder="Digite as tecnologias e linguagens que você tem conhecimento"></textarea>
+                                </div>
+                                <div class="form-header">
+                                    <h1 class="form-header-titulo" id="Ep">Experiência Profissional</h1>
+                                </div>
+                                <div class="input-box">
+                                    <label for="funcao">Empresa</label>
+                                    <input type="text" id="empresa" name="empresa" Placeholder="Digite sua empresa">
+                                </div>
+                                <div class="input-box">
+                                    <label for="empresa">Cargo</label>
+                                    <input type="text" id="cargo" name="cargo" Placeholder="Digite sua empresa">
+                                </div>
+                                <div class="input-box">
+                                    <label for="area">Área de Atuação</label>
+                                    <select name="area" id="area">
+                                        <option value="" selected></option>
+                                        <option value="M">Tecnologia</option>
+                                        <option value="F">Outro</option>
+                                    </select>
+                                </div>
+                                <div class="input-box">
+                                    <label for="entrada">Data de Início</label>
+                                    <input type="date" id="entrada" name="entrada">            
+                                </div>
+                                <div class="input-box">
+                                    <label for="saida">Data de Saída</label>
+                                    <input type="date" id="saida" name=saida>
+                                </div>
                             </div>
                             <div class="form-botoes">
-                                <button id="criar"><a href="#">Criar conta</a></button>
-                                <button id="linkedin"><a href="#">Entrar com Linkedin</a></button>
+                                <button id="continuar" type="submit"><a href="#">Criar conta</a></button>
                             </div>
                             <div class="form-footer">
                                 <p id="footer-ajuda">Precisa de ajuda? <a href="#">Clique aqui</a></p>
@@ -98,6 +150,6 @@
             </div>
     </main>
     
-    <script src="/Front-end/scripts/app.js" type="module"></script>
+    <script src="../scripts/index.js"></script>
 </body>
 </html>
