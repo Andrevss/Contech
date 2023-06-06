@@ -1,4 +1,4 @@
-const url = "https://localhost:3000/aluno"
+const url = "https://localhost:3000/"
 
 const loadingElement = document.querySelector("#loading")
 const postContainer = document.querySelector("#fill-list")
