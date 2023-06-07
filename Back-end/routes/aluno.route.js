@@ -7,22 +7,10 @@ let Aluno = require('../model/Aluno');
 // api to post alunos
 alunoRoutes.post('/', async (req, res) =>{
 
-    const {nome, email, cpf, curso, instituicao, grau, anoEntrada, tecnologias, funcao, empresa, dataInic, dataFim, sobre} = req.body;
+    const {nome, email, cpf, rg, dataNasc, sexo, PrimeiraSenha, curso, instituicao, grau, anoEntrada, tecnologias, empresa, cargo, area, inicio, saida} = req.body;
 
     const aluno = {
-        nome, 
-        email, 
-        cpf,
-        curso,
-        instituicao,
-        grau,
-        anoEntrada,
-        tecnologias,
-        funcao,
-        empresa,
-        dataInic,
-        dataFim,
-        sobre,
+      nome, email, cpf, rg, dataNasc, sexo, PrimeiraSenha, curso, instituicao, grau, anoEntrada, tecnologias, empresa, cargo, area, inicio, saida
     }
 
     try {
