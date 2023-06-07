@@ -41,75 +41,77 @@ body {
 	color: white;
 	text-decoration: none;
 	transition: .5s;
-	display: block;
-
 }
 
 .cabecalhoPrincipal-nav-link-cadastre{
     border: 1px solid #fff;
     border-radius: 15px;
+    padding: 20px;
+	margin-bottom: 10px;
+	color: white;
+	text-decoration: none;
+	transition: .5s;
 }
 
 /*Fim do Header*/
-.conteudoPrincipal{
-    width: 100%;
-    height: 100%;
+
+.conteudoPrincipal-texto{
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.form-inputs{
-    width: 100%;
-    height: 100%;
+.conteudoPrincipal h2{
+    color: #303F50;
+    font-size: 1.75rem;
+    padding: 2rem 0 1.5rem 0;
+    font-weight: bolder;
 }
 
-.form-esquerda{
-    width: 50%;
-    height: 100%;
-    
+.conteudoPrincipal p{
+    text-align: justify;
+    font-size: 1rem;
+    font-weight: 400;
+    padding-right: 2%;
 }
 
-.inputs-esquerda{
-    width: 50%;
-    height: 100%;
-    
+.conteudoPrincipal p a{
+    text-decoration: none;
 }
 
-.form-direita{
-    width: 50%;
+.conteudoPrincipal img{
+    width: 45%;
+    border-radius: 15px;
+}
+
+.txtimg{
     display: flex;
 }
-
-
-.form-header p{
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #0C5EB8;
-}
-
-.form-inputs{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.input-box input, .input-box select{
-    width: 220px;
-    margin: 0.6rem 0;
-    padding: 0.8rem 1.2rem;
-    border: none;
+.conteudoPrincipal h2::after{
+    content:'';
+    display: block;
+    width: 10rem;
+    height: 0.3rem;
+    background-image: linear-gradient(to left, #00FF47, #0F70DA);
+    margin: 0 auto;
+    margin-left: 0%;
+    margin-top: 0.30%;
+    position: relative;
     border-radius: 10px;
-    box-shadow: 1px 1px 6px #0000001C;
 }
 
-.input-box input:hover, .input-box select:hover{
-    background-color: #eeeeee75;
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.85rem;
+    font-weight: 600;
+    line-height: 140%;
+    margin-top: 5%;
 }
 
-.input-box input:focus-visible, .input-box select:focus-visible{
-    outline: 1px solid #74727275;
-}
-
-.input-box input::placeholder, .input-box select::placeholder{
-    font-size: 0.70rem;
-    color: #2D3748;
+footer p a{
+    text-decoration: none;
 }

@@ -169,12 +169,16 @@ body {
     box-shadow: 1px 1px 6px #0000001C;
 }
 
-.input-box input[id="Nome"], .input-box input[id="empresa"]{
+.input-box input[id="nome"], .input-box input[id="empresa"]{
     width: 698px;
 }
 
-.input-box select[id="curso"]{
-    width: 736px;
+.input-box select[id="curso"], .input-box select[id="instituicao"]{
+    width: 500px;
+}
+
+.input-box select[id="grau"], .input-box select[id="anoEntrada"]{
+    width: 200px;
 }
 
 .input-box textarea{

@@ -6,7 +6,7 @@ form1.addEventListener('submit', evento =>{
     const formData = new FormData(form1);
     const data = Object.fromEntries(formData);
 
-    fetch('https://127.0.0.1:3000/', {
+    fetch('http://localhost:3000/aluno', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
