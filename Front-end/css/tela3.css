@@ -183,6 +183,7 @@ body {
 
 .form-botoes button[id="login"]{
     background-color: #0C5EB8;
+    margin-top: 4%;
     margin-bottom: 4%;
 }
     

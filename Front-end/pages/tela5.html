@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Front-end/css/reset.css">
-    <link rel="stylesheet" href="/Front-end/css/tela5.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/tela5.css">
     <title>Contech | Cadastre-se</title>
 </head>
 <body>
@@ -15,7 +15,7 @@
                 <img src="/Front-end/Img/Logo - white.png" alt="">
             </div>
             <nav class="cabecalhoPrincipal-nav">
-                <a class="cabecalhoPrincipal-nav-link" href="#">Saiba Mais</a>
+                <a class="cabecalhoPrincipal-nav-link" href="../pages/tela4.html">Saiba Mais</a>
                 <a class="cabecalhoPrincipal-nav-link" href="#">Empresas</a>
                 <a class="cabecalhoPrincipal-nav-link" href="/Front-end/pages/tela3.html">Login</a>
                 <a class="cabecalhoPrincipal-nav-link cabecalhoPrincipal-nav-link-cadastre" href="#">Cadastre-se</a>
@@ -23,44 +23,39 @@
         </div>
     </header>
     <main class="conteudoPrincipal">
-        <div class="conteudoPrincipal-header">
-            <img src="/Front-end/Img/Img -Filtro.png">
-            <p>Encontre o candidato ideal para as suas vagas em aberto!</p>
-        </div>
-        <div class="conteudoPrincipal-selects">
-            <div class="input-box">
-                <label for="curso">Curso</label>
-                <select name="curso" id="curso">
-                    <option value="" selected></option>
-                    <option value="ADS">Análise e Desenvolvimento de Sistemas</option>
-                    <option value="SPI">Sistemas para internet</option>
-                </select>
+        <div class="container">
+            <div class="conteudoPrincipal-header">
+                <p>Encontre o candidato ideal para as suas vagas em aberto em um dos maiores programas de formação tecnológica do Brasil!</p>
+                <img src="../Img/Group 19.png">
             </div>
-            <div class="input-box">
-                <label for="instituicao">Instituicao</label>
-                <select name="instituicao" id="instituicao">
-                    <option value="" selected></option>
-                    <option value="uninassau">Centro Universitário Maurício de Nassau</option>
-                    <option value="tiradentes">Centro Universitário Tiradentes</option>
-                    <option value="senac">Faculdade SENAC Pernambuco</option>
-                    <option value="ficr">Faculdade Imaculada Conceição do Recife</option>
-                    <option value="catolica">Universidade Católica de Pernambuco</option>
-                </select>
+            <div class="perfis-container">
+                <div class="cpf">
+                    <p>CPF</p>
+                    <h4 id="perfis-cpf"></h4>
+                </div>
+                <div class="nome">
+                    <p>Nome</p>
+                    <h4 id="perfis-nome"></h4>
+                </div>
+                <div class="email">
+                    <p>Email</p>
+                    <h4 id="perfis-email"></h4>
+                </div>
+                <div class="curso">
+                    <p>Curso</p>
+                    <h4 id="perfis-curso"></h4>
+                </div>
+                <div class="instituicao">
+                    <p>Instituicao</p>
+                    <h4 id="perfis-instituicao"></h4>
+                </div>
             </div>
-            <div class="input-box">
-                <label for="anoEntrada">Ano de Entrada</label>
-                <select name="anoEntrada" id="anoEntrada">
-                    <option value="" selected></option>
-                    <option value="21">2021.2</option>
-                    <option value="22.1">2022.1</option>
-                    <option value="22.2">2022.2</option>
-                    <option value="23.1">2023.1</option>
-                </select>
-            </div>      
-        </div>
-        <div id="perfis-container">
         </div>
     </main>
-    <script src="../scripts/scripts.js"></script>
+    <footer>
+        <p id="footer-ajuda">Precisa de ajuda? <a href="#">Clique aqui</a></p>
+        <p id="footer-copyright">Faculdade Senac © Todos os direitos reservados</p>    
+    </footer>
+    <script src="../scripts/tela5.js"></script>
 </body>
 </html>
