@@ -9,7 +9,28 @@ let Aluno = new Schema({
     type: String
   },
   cpf: {
-    type: Number
+    type: String
+  },
+  rg: {
+    type: String
+  },
+  dataNasc: {
+    type: String
+  },
+  sexo: {
+    type: String
+  },
+  PrimeiraSenha: {
+    type: String
+  },
+  sobre: {
+    type: String
+  },
+  github: {
+    type: String
+  },
+  linkedin: {
+    type: String
   },
   curso: {
     type: String
@@ -21,26 +42,26 @@ let Aluno = new Schema({
     type: String
   },
   anoEntrada: {
-    type: Date
-  },
-  tecnologias: {
     type: String
   },
-  funcao: {
+  tecnologias: {
     type: String
   },
   empresa: {
     type: String
   },
-  dataInic: {
-    type: Date
-  },
-  dataFim: {
-    type: Date
-  },
-  sobre: {
+  cargo: {
     type: String
-  }
+  },
+  area: {
+    type: String
+  },
+  inicio: {
+    type: String
+  },
+  saida: {
+    type: String
+  },
 },{
     collection: 'aluno'
 });
