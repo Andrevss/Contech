@@ -13,4 +13,7 @@ form1.addEventListener('submit', evento =>{
         },
         body: JSON.stringify(data)
     }).then(res => res.json()).then(data => console.log(data))
+
+    window.location.href="tela4.html"
 })
+
