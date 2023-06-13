@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/tela2.css">
+    <script src="../scripts/mascaras.js"></script>
     <title>Contech | Cadastre-se</title>
 </head>
 <body>
@@ -50,32 +51,44 @@
                                 </div>
                                 <div class="input-box">
                                     <label for="cpf">Digite seu CPF</label>
-                                    <input type="text" id="cpf" name="cpf" Placeholder="Digite seu CPF">
+                                    <input type="text" id="cpf" name="cpf" Placeholder="Digite seu CPF" maxlength="14" onkeyup="mascara_cpf()">
                                 </div>
                                 <div class="input-box">
                                     <label for="rg">Digite seu RG</label>
-                                    <input type="text" id="rg" name="rg" Placeholder="Digite seu RG">
+                                    <input type="text" id="rg" name="rg" Placeholder="Digite seu RG" maxlength="9" onkeyup="mascara_rg()">
                                 </div>
                                 <div class="input-box">
                                     <label for="DataNasc">Data de Nascimento</label>
-                                    <input type="date" id="dataNasc" name="DataNasc">
+                                    <input type="date" id="dataNasc" name="DataNasc" maxlength="10" >
                                 </div>
                                 <div class="input-box">
                                     <label for="sexo">Sexo</label>
                                     <select name="sexo" id="sexo">
                                         <option value="" selected></option>
-                                        <option value="M">Masculino</option>
-                                        <option value="F">Feminino</option>
+                                        <option value="Masculino">Masculino</option>
+                                        <option value="Feminino">Feminino</option>
                                         <option value="ND">Prefiro não revelar</option>
                                     </select>
                                 </div>
                                 <div class="input-box">
                                     <label for="PrimeiraSenha">Digite sua senha</label>
-                                    <input type="password" id="PrimeiraSenha" name="PrimeiraSenha" Placeholder="Digite sua senha" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[!@#$%^_=+-]).{6,12}$">
+                                    <input type="password" id="PrimeiraSenha" name="PrimeiraSenha" Placeholder="Digite sua senha">
                                 </div>
                                 <div class="input-box">
                                     <label for="SegundaSenha">Confirme sua senha</label>
                                     <input type="password" id="SegundaSenha" name="SegundaSenha" Placeholder="Digite sua senha novamente">
+                                </div>
+                                <div class="input-box">
+                                    <label for="sobre">Sobre você</label>
+                                    <textarea cols="97" rows="7" id="sobre" name="sobre" placeholder="Nos fale sobre você, suas experiências, áreas de interesse, etc."></textarea>
+                                </div>
+                                <div class="input-box">
+                                    <label for="github">Digite seu perfil no Github</label>
+                                    <input type="text" id="github" name="github" Placeholder="github.com/User">
+                                </div>
+                                <div class="input-box">
+                                    <label for="linkedin">Confirme seu perfil no Linkedin</label>
+                                    <input type="text" id="linkedin" name="linkedin" Placeholder="linkedin.com/in/user/">
                                 </div>
                                 <div class="form-header">
                                     <h1 class="form-header-titulo" ID="Fa">Formação Acadêmica</h1>
@@ -134,21 +147,24 @@
                                     <label for="area">Área de Atuação</label>
                                     <select name="area" id="area">
                                         <option value="" selected></option>
-                                        <option value="Tec">Tecnologia</option>
-                                        <option value="Outro">Outro</option>
+                                        <option value="Tecnologia">Tecnologia</option>
+                                        <option value="ADM">Administração</option>
+                                        <option value="Contabilidade">Contabilidade</option>
+                                        <option value="Produção">Produção</option>
+                                        <option value="Outro">Outros</option>
                                     </select>
                                 </div>
                                 <div class="input-box">
                                     <label for="inicio">Data de Início</label>
-                                    <input type="date" id="inicio" name="inicio">            
+                                    <input type="date" id="inicio" name="inicio" maxlength="10">            
                                 </div>
                                 <div class="input-box">
                                     <label for="saida">Data de Saída</label>
-                                    <input type="date" id="saida" name=saida>
+                                    <input type="date" id="saida" name=saida maxlength="10">
                                 </div>
                             </div>
-                            <div class="form-botoes">
-                                <button id="continuar" type="submit"><a href="../pages/tela4.html">Criar conta</a></button>
+                            <div class="form-botao">
+                                <button id="continuar" type="submit">Criar conta</button>
                             </div>
                             <div class="form-footer">
                                 <p id="footer-ajuda">Precisa de ajuda? <a href="#">Clique aqui</a></p>
@@ -159,7 +175,6 @@
                 </section>
             </div>
     </main>
-    
     <script src="../scripts/index.js"></script>
 </body>
 </html>

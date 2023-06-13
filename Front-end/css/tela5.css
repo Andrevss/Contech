@@ -100,6 +100,30 @@ body {
     padding-right: 8%;
 }
 
+.icon-perfil, .icon-delete{
+    margin-top: 2%;
+    margin-left: 2%;
+}
+
+#icon-perfil{
+    display: flex;
+    flex-direction: column;
+}
+
+.fa-id-card{
+    color: #2D3748;
+    width: 20px;
+}
+
+.fa-trash{
+    color:#e90404;
+    margin-top: 2%;
+}
+
+#icon-delete{
+    display: flex;
+    flex-direction: column;
+}
 
 
 .perfis-container p::after{
