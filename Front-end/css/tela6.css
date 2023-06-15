@@ -48,8 +48,7 @@ body {
 }
 
 .cabecalhoPrincipal-nav-link-cadastre{
-    background-color: #fff;
-    
+    border: 1px solid #fff;
     border-radius: 15px;
 }
 
@@ -111,13 +110,22 @@ img{
     width: 70%;
 }
 
+.flex{
+    display: flex;
+}
+
 .container h3{
     font-size: 1.35rem;
     padding-bottom: 2%;
-    font-weight: bolder;
-    
+    font-weight: bolder;   
 }
 
+.container h4{
+    font-size: 0.80rem;
+    font-weight: 600;
+    color: #2D3748;
+    margin-top: 1%;
+}
 .container h3::after{
     content:'';
     display: block;
@@ -139,17 +147,41 @@ img{
     display: flex;
 }
 
-.inicio, .grau{
-    margin-right: 20%;
+.anoEntrada, .area{
+    margin-left: 20%;  
+}
+
+.saida{
+    margin-left: 15%;
 }
 
 .cpf{
     margin-right: 10%;
 }
 
+.rg, .linkedin{
+    margin-left: 4%;
+}
+
 .perfil-P p, .perfil-FA p, .perfil-DP p{
     font-size: 1.05rem;
     font-weight: bold;
+}
+
+.sobre{
+    margin: 2% 0 2% 0;
+}
+
+.sobre p{
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.sobre h4{
+    font-size: 0.90rem;
+    font-weight: 600;
+    text-align: justify;
+
 }
 
 .perfil-dividido{
@@ -175,5 +207,21 @@ img{
 
 .padding{
     padding: 2%;
+}
+
+footer{
+    color: #fff;
+    margin-top: 5%;
+    display: flex;
+    font-size: 0.85rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 125%;
+    font-weight: 600;
+}
+
+footer a{
+    text-decoration: none;
 }
 

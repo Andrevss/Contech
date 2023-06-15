@@ -129,7 +129,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem 0 2rem;
+    padding: 0 1.8rem 0 2rem;
 }
 
 .form-inputs{
@@ -242,6 +242,10 @@ body {
     align-items: center;
     line-height: 140%;
     margin-top: 5%;
+}
+
+.form-footer a{
+    text-decoration: none;
 }
 
 @media(max-width: 1140) {
