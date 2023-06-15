@@ -65,16 +65,18 @@ body {
 .conteudoPrincipal .container{
     margin: 0 auto;
     width: 70%;
+    height: 500px;
     display: flex;
     flex-direction: column;
     background-color: #ffffff90;
     border-radius: 15px;
     padding: 2%;
     margin-top: 5%;
+    overflow-y: auto;
 }
 
 .perfil-header h1{
-    color: #303F50;
+    color: #171f27;
     font-size: 1.75rem;
     padding-bottom: 4%;
     font-weight: bolder;
@@ -84,7 +86,7 @@ body {
 .perfil-header h1::after{
     content:'';
     display: block;
-    width: 7rem;
+    width: 12.5rem;
     height: 0.3rem;
     background-image: linear-gradient(to left, #00FF47, #0F70DA);
     margin: 0 auto;
@@ -97,22 +99,29 @@ body {
     display: flex;
 }
 
-img{
+.perfil-P{
+    width: 60%;
+}
+
+.perfil-img{
     width: 40%;
-    margin-left: 45%;
+}
+
+img{
+    width: 70%;
 }
 
 .container h3{
-    color: #303F50;
-    font-size: 1.25rem;
+    font-size: 1.35rem;
     padding-bottom: 2%;
     font-weight: bolder;
+    
 }
 
 .container h3::after{
     content:'';
     display: block;
-    width: 13rem;
+    width: 15rem;
     height: 0.15rem;
     background-color: #303F50;
     margin: 0 auto;
@@ -126,7 +135,25 @@ img{
     flex-direction: column;
 }
 
+.dados-numeros, .grau-entrada, .github, .linkedin, .periodo{
+    display: flex;
+}
+
+.inicio, .grau{
+    margin-right: 20%;
+}
+
+.cpf{
+    margin-right: 10%;
+}
+
+.perfil-P p, .perfil-FA p, .perfil-DP p{
+    font-size: 1.05rem;
+    font-weight: bold;
+}
+
 .perfil-dividido{
+    padding-top: 2%;
     width: 100%;
     display: flex;
 }
@@ -135,3 +162,18 @@ img{
     display: flex;
     flex-direction: column;
 }
+
+.perfil-DP{
+    width: 50%;
+}
+
+.github a, .linkedin a{
+    text-decoration: none;
+    color: #202733;
+    margin-left: 5%;
+}
+
+.padding{
+    padding: 2%;
+}
+

@@ -56,6 +56,9 @@ let Aluno = new Schema({
   area: {
     type: String
   },
+  atividades: {
+    type: String
+  },
   inicio: {
     type: String
   },

@@ -90,14 +90,30 @@ body {
     height: 200px;
     background: #ffffff90;
     display: flex;
-    justify-content: center;
     border-radius: 15px;
-    padding: 1.25%;
+    padding: 1rem;
     overflow-y: scroll;
+    overflow-x: auto;
+}
+
+.nome{
+    width: 25%;
+}
+
+.instituicao{
+    width: 20%;
+}
+
+.cpf{
+    width: 12%;
+}
+
+.curso{
+    width: 25%;
 }
 
 .cpf, .nome, .email, .curso{
-    padding-right: 8%;
+    padding-right: 3%;
 }
 
 .icon-perfil, .icon-delete{
@@ -113,11 +129,15 @@ body {
 .fa-id-card{
     color: #2D3748;
     width: 20px;
+    LINE-HEIGHT: 155%;
 }
 
 .fa-trash{
     color:#e90404;
     margin-top: 2%;
+    LINE-HEIGHT: 155%;
+    cursor: pointer;
+
 }
 
 #icon-delete{
@@ -125,13 +145,12 @@ body {
     flex-direction: column;
 }
 
-
 .perfis-container p::after{
     content:'';
     display: block;
-    width: 110%;
-    height: 0.20rem;
-    background-image: linear-gradient(to left, #00FF47, #0F70DA);
+    width: 100%;
+    height: 0.10rem;
+    background-color: #65789b;
     margin: 0 auto;
     margin-left: 0%;
     position: relative;
@@ -140,13 +159,13 @@ body {
 
 .perfis-container p{
     font-size: 1.25rem;
-    font-weight: 600;
+    font-weight: bolder;
     color: #2D3748;
-    text-align: center;
+    text-align: left;
 }
 
 .perfis-container h4{
-    text-align: center;
+    text-align: left;
     line-height: 155%;
 }
 

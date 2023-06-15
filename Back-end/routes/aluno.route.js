@@ -7,10 +7,10 @@ let Aluno = require('../model/Aluno');
 // api to post alunos
 alunoRoutes.post('/', async (req, res) =>{
 
-    const {nome, email, cpf, rg, dataNasc, sexo, PrimeiraSenha, sobre, github, linkedin, curso, instituicao, grau, anoEntrada, tecnologias, empresa, cargo, area, inicio, saida} = req.body;
+    const {nome, email, cpf, rg, dataNasc, sexo, PrimeiraSenha, sobre, github, linkedin, curso, instituicao, grau, anoEntrada, tecnologias, empresa, cargo, area, atividades, inicio, saida} = req.body;
 
     const aluno = {
-      nome, email, cpf, rg, dataNasc, sexo, PrimeiraSenha, sobre, github, linkedin, curso, instituicao, grau, anoEntrada, tecnologias, empresa, cargo, area, inicio, saida
+      nome, email, cpf, rg, dataNasc, sexo, PrimeiraSenha, sobre, github, linkedin, curso, instituicao, grau, anoEntrada, tecnologias, empresa, cargo, area, atividades, inicio, saida
     }
 
     try {
@@ -24,6 +24,24 @@ alunoRoutes.post('/', async (req, res) =>{
 })
 
 // api to get alunos
+alunoRoutes.get('/:id', async (req, res) => {
+  const id = req.params.id;
+
+  try {
+    const aluno = await Aluno.findOne({ _id: id })
+
+    if (!aluno) {
+      res.status(404).json({ message: 'Aluno não encontrado' })
+      return
+    }
+
+    res.status(200).json(aluno)
+  } catch (error) {
+    res.status(500).json({ error: error })
+  }
+});
+
+// api to get all alunos
 alunoRoutes.get('/', async (req, res) => {
   try {
     const students = await Aluno.find()
@@ -34,22 +52,7 @@ alunoRoutes.get('/', async (req, res) => {
   }
 })
 
-// api to get alunos by id
-alunoRoutes.get('/:id', async (req, res) =>{
-  const id = req.params.id;
 
-  try {
-    const person = await Aluno.findOne({_id: id})
-
-    if(!Aluno) {
-      res.status(422).json({message: 'Usuário não encontrado'})
-      return
-    }
-  } catch (error) {
-    res.status(500).json({error: error})
-  }
-  
-});
 
 // api to update personal aluno data (patch route)
 alunoRoutes.patch('/:id', async (req, res) => {

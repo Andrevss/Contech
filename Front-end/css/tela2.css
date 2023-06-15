@@ -219,6 +219,7 @@ body {
     border: none;
     border-radius: 5px;
     margin-top: 3%;
+    cursor: pointer;
 }
 
 .form-botao button[id="continuar"]{
